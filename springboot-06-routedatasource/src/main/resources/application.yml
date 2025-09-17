@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/spring-dao?characterEncoding=utf8
+      username: springboot
+      password: 123456
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/springboot-dao?characterEncoding=utf8
+      username: springboot
+      password: 123456

@@ -4,6 +4,7 @@ import com.linkedbear.springboot.practice.bean.Person;
 import com.linkedbear.springboot.practice.logging.LoggingService;
 import com.linkedbear.springboot.starter.component.Cat;
 import com.linkedbear.springboot.starter.component.Dog;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,12 +15,12 @@ import java.util.Properties;
 @SpringBootApplication
 public class SpringBootPracticeApplication {
     
-//    @Value("${person.name}")
-//    private String name;
+    @Value("${person.name}")
+    private String name;
     
     public static void main(String[] args) {
-//        var ctx = SpringApplication.run(SpringBootPracticeApplication.class, args);
-//        System.out.println(ctx.getBean(SpringBootPracticeApplication.class).name);
+        var ctx = SpringApplication.run(SpringBootPracticeApplication.class, args);
+        System.out.println(ctx.getBean(SpringBootPracticeApplication.class).name);
 //        System.out.println(ctx.getBean(Person.class));
         
 //        SpringApplication springApplication = new SpringApplication(SpringBootPracticeApplication.class);
@@ -29,9 +30,9 @@ public class SpringBootPracticeApplication {
 //        springApplication.setDefaultProperties(properties);
 //        springApplication.run(args);
         
-        SpringApplication springApplication = new SpringApplication(SpringBootPracticeApplication.class);
-        springApplication.setAdditionalProfiles("sky");
-        var ctx = springApplication.run(args);
+//        SpringApplication springApplication = new SpringApplication(SpringBootPracticeApplication.class);
+//        springApplication.setAdditionalProfiles("sky");
+//        var ctx = springApplication.run(args);
 //        SpringApplication springApplication = new SpringApplicationBuilder(
 //                SpringBootPracticeApplication.class).profiles("sky").build();
         

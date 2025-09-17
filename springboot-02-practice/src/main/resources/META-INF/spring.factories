@@ -1,3 +1,6 @@
 org.springframework.boot.diagnostics.FailureAnalyzer=\
   com.linkedbear.springboot.practice.failure.ChinesePortInUseFailureAnalyzer,\
   com.linkedbear.springboot.practice.failure.IllegalPortFailureAnalyzer
+
+org.springframework.boot.SpringApplicationRunListener=\
+  com.linkedbear.springboot.practice.listener.TestRunListener
