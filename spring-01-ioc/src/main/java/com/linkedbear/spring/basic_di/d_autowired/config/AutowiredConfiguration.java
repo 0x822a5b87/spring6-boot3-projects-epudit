@@ -21,13 +21,19 @@ public class AutowiredConfiguration {
         cat.setPerson(person);
         return cat;
     }
-    
+
     @Bean
     @Primary
-    public Person master() {
+    public Person master_of_cat() {
         Person master = new Person();
-        master.setName("master");
+        master.setName("master_of_cat");
         return master;
     }
 
+    @Bean
+    public Person master_of_dog() {
+        Person master = new Person();
+        master.setName("master_of_dog");
+        return master;
+    }
 }
