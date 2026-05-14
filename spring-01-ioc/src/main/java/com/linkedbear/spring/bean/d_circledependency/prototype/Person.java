@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class Person {
-    
+
     @Autowired
     Cat cat;
-    
+
     @Override
     public String toString() {
         return "Person{" + "cat=" + cat.hashCode() + '}';
