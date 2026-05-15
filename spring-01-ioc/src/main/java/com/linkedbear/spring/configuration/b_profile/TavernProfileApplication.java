@@ -6,11 +6,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.stream.Stream;
 
 public class TavernProfileApplication {
-    
+
     public static void main(String[] args) throws Exception {
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(TavernConfiguration.class);
+        AnnotationConfigApplicationContext ctx =
+                new AnnotationConfigApplicationContext(TavernConfiguration.class);
         ctx.getEnvironment().setActiveProfiles("city");
-        Stream.of(ctx.getBeanDefinitionNames()).forEach(System.out::println);
+        Stream.of(ctx.getBeanDefinitionNames())
+              .filter(name -> !name.startsWith("org.springframework"))
+              .forEach(System.out::println);
 
 //        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 //        ctx.getEnvironment().setActiveProfiles("city");
