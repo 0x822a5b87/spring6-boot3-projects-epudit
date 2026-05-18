@@ -9,6 +9,10 @@ public class LoggingService {
     
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     private static final Logger LOGGER = LoggerFactory.getLogger(LoggingService.class);
+
+    public void info(String msg) {
+        logger.info(msg);
+    }
     
     public void printLog() {
         logger.debug("这是一条debug日志");

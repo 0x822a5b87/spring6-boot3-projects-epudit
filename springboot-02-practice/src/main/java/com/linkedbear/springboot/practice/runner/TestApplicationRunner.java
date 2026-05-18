@@ -9,8 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestApplicationRunner implements ApplicationRunner {
     
+    private final Person person;
+
     @Autowired
-    private Person person;
+    public TestApplicationRunner(Person person) {
+        this.person = person;
+    }
     
     @Override
     public void run(ApplicationArguments args) throws Exception {
