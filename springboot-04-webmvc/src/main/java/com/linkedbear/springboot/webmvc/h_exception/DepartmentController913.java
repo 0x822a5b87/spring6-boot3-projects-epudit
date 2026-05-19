@@ -51,12 +51,11 @@ public class DepartmentController913 {
         return "dept/deptList";
     }
     
-//    @ExceptionHandler(ArithmeticException.class)
-//    @ResponseBody
+    @ExceptionHandler(ArithmeticException.class)
     public String handleArithmeticException(ArithmeticException e, Model model) {
         e.printStackTrace();
-//        return "请求出现错误，请稍后再试";
         model.addAttribute("errorMessage", e.getMessage());
+        System.out.println("handle arithmetic exception.");
         return "error/errorPage";
     }
 }

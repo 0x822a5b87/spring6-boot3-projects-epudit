@@ -13,6 +13,6 @@ public class TransactionListenerController {
     
     @GetMapping("/saveUser")
     public void saveUser() {
-        userService.saveUser();
+        userService.saveAndQuery();
     }
 }
